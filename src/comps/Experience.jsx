@@ -7,20 +7,10 @@ import { useThemeContext } from "../context/ThemeContext";
 
 const Experience = () => {
   const { colorData } = useThemeContext();
-  const style = {
-    filter: "contrast(100%) brightness(100%)",
-    background: `linear-gradient(
-        129deg,
-        rgba(216, 216, 0, 0.382),
-        30%,
-        #120d14
-      ),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 254 254' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")
-    `,
-  };
 
   return (
-    <div className="bg-[#120d14]">
+    <div className="bg-[#120d14] pt-12">
+      <h3 className="text-center text-white text-5xl mb-9">Experience</h3>
       <div className=" mx-12  text-white">
         <VerticalTimeline lineColor="white">
           <VerticalTimelineElement

@@ -4,7 +4,7 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [colorData, setColorData] = useState({
-    base: "yellow",
+    base: "blue",
   });
   return (
     <ThemeContext.Provider value={{ colorData, setColorData }}>
