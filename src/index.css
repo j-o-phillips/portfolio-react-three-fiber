@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#test /* resulting css */ {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(130deg, yellow, 10%, #120d14);
-  /* filter: contrast(100%) brightness(100%); */
-  /* background: linear-gradient(
-      125deg,
-      rgba(214, 214, 1, 0.339),
-      30%,
-      rgb(18, 13, 20, 1)
-    ),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 254 254' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); */
-}
-
 .htmlScreen iframe {
   width: 1024px;
   height: 670px;
@@ -24,14 +10,117 @@
   background: #000000;
 }
 
-.overlay-cont {
+#overlay-cont {
   position: relative;
 }
 
 .overlay {
   position: absolute;
   top: 0;
-  right: 0;
-  background-color: aqua;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.6;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-cont {
+  width: 150px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-left {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+.arrow-right {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+}
+
+.skill-card {
+  margin: 10px;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.skill-card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgb(5, 6, 45);
+  border-radius: 50%;
+  width: 100%;
+}
+
+.toggle-cont {
+  width: 102px;
+  height: 24px;
+  border-radius: 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-cont > div {
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+}
+
+.yellowIcon {
+  background-color: yellow;
+}
+
+.blueIcon {
+  background-color: blue;
+}
+
+.redIcon {
+  background-color: red;
+}
+
+.greenIcon {
+  background-color: green;
+}
+
+.orangeIcon {
+  background-color: orange;
+}
+
+.ball {
+  width: 15px;
+  height: 15px;
+  background-color: #868686;
+  border-radius: 50%;
+  position: absolute;
+  transition: all;
+  transition-duration: 0.5s;
 }

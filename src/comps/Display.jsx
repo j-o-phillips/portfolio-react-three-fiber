@@ -7,8 +7,9 @@ import {
   Html,
   Text,
 } from "@react-three/drei";
+import { projects } from "../content/projects";
 
-export default function Display() {
+export default function Display({ projectNumber }) {
   const computer = useGLTF(
     "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
   );
@@ -41,7 +42,7 @@ export default function Display() {
             position={[0, 1.56, -1.4]}
             rotation-x={-0.256}
           >
-            <iframe src="https://spaceacademy-frontend-production.up.railway.app/" />
+            <iframe src={projects[projectNumber].website} />
           </Html>
         </primitive>
         <Text
@@ -51,7 +52,7 @@ export default function Display() {
           maxWidth={2}
           textAlign="center"
         >
-          SPACE ACADEMY
+          {projects[projectNumber].name}
         </Text>
         <Text
           fontSize={0.2}
@@ -60,11 +61,20 @@ export default function Display() {
           maxWidth={2}
           textAlign="center"
         >
-          Github
+          Timeframe: 1 week
+        </Text>
+        <Text
+          fontSize={0.2}
+          position={[2, -0.3, 0.75]}
+          rotation-y={-1.25}
+          maxWidth={2}
+          textAlign="center"
+        >
+          Team: Solo
         </Text>
       </Float>
       {/* </PresentationControls> */}
-      <ContactShadows position-y={-1.4} opacity={0.4} scale={5} blur={2.4} />
+      <ContactShadows position-y={-1.4} opacity={0.6} scale={5} blur={2.4} />
     </>
   );
 }

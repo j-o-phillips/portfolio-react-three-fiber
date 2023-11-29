@@ -3,8 +3,10 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { useThemeContext } from "../context/ThemeContext";
 
 const Experience = () => {
+  const { colorData } = useThemeContext();
   const style = {
     filter: "contrast(100%) brightness(100%)",
     background: `linear-gradient(
@@ -24,12 +26,12 @@ const Experience = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work shadow-none"
             contentStyle={{
-              background: "linear-gradient(130deg, yellow, 20%, #120d14)",
+              background: `linear-gradient(130deg, ${colorData.base}, 20%, #120d14)`,
             }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="2011 - present"
             iconStyle={{
-              background: "linear-gradient(130deg, yellow, 50%, #120d14)",
+              background: `linear-gradient(130deg, ${colorData.base}, 50%, #120d14)`,
             }}
           >
             <h3 className="vertical-timeline-element-title ">
@@ -44,11 +46,11 @@ const Experience = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "linear-gradient(130deg, yellow, 20%, #120d14)",
+              background: `linear-gradient(130deg, ${colorData.base}, 20%, #120d14)`,
             }}
             date="2010 - 2011"
             iconStyle={{
-              background: "linear-gradient(130deg, yellow, 50%, #120d14)",
+              background: `linear-gradient(130deg, ${colorData.base}, 50%, #120d14)`,
             }}
           >
             <h3 className="vertical-timeline-element-title">Art Director</h3>
@@ -63,11 +65,11 @@ const Experience = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "linear-gradient(130deg, yellow, 20%, #120d14)",
+              background: `linear-gradient(130deg, ${colorData.base}, 20%, #120d14)`,
             }}
             date="2008 - 2010"
             iconStyle={{
-              background: "linear-gradient(130deg, yellow, 50%, #120d14)",
+              background: `linear-gradient(130deg, ${colorData.base}, 50%, #120d14)`,
             }}
           >
             <h3 className="vertical-timeline-element-title">Web Designer</h3>

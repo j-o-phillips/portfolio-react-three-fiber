@@ -1,11 +1,16 @@
 import { Canvas } from "@react-three/fiber";
 import Display from "./Display";
 import ProjectArrows from "./ProjectArrows";
+import { useState } from "react";
 
 const Projects = () => {
-  let setWidth;
+  const [projectNumber, setProjectNumber] = useState(0);
+
+  //width must be even and static for iframe to be positioned correctly
+  let setWidth = window.innerWidth;
   if (setWidth % 2 !== 0) {
     setWidth = window.innerWidth - 1;
+    console.log("set odd");
   }
   window.addEventListener("resize", () => {
     if (setWidth % 2 !== 0) {
@@ -15,11 +20,11 @@ const Projects = () => {
 
   return (
     <>
-      <div className="bg-[#120d14]">
+      <div className="bg-[#120d14] pt-12">
         <h3 className="text-center text-white text-5xl">Recent Projects</h3>
 
         <div
-          className="flex justify-center items-center  h-[800px]"
+          className="flex justify-center items-center  h-[700px]"
           style={{ width: `${setWidth}px` }}
           id="overlay-cont"
         >
@@ -33,10 +38,13 @@ const Projects = () => {
                 position: [-3, 1.5, 4],
               }}
             >
-              <Display />
+              <Display projectNumber={projectNumber} />
             </Canvas>
           </div>
-          <ProjectArrows />
+          <ProjectArrows
+            projectNumber={projectNumber}
+            setProjectNumber={setProjectNumber}
+          />
         </div>
         <h5 className="text-center text-white text-4xl">Space Academy</h5>
         <p className="text-white">
