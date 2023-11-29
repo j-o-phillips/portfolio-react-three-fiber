@@ -12,7 +12,7 @@ import Interests from "./comps/Interests";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="bg-black">
+      <div className="bg-[#120d14]">
         <Navbar />
         <Hero />
       </div>
