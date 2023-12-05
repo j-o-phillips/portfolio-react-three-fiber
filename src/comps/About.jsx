@@ -15,7 +15,7 @@ const About = () => {
           }}
         ></div>
       </div>
-      <div className="h-[400px] w-[45%] bg-slate-300"></div>
+      <div className={`h-[400px] w-[45%] bg-slate-300`}></div>
     </div>
   );
 };
