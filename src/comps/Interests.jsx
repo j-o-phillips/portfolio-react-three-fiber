@@ -1,7 +1,7 @@
 import React from "react";
 
 const Interests = () => {
-  return <div>Interests</div>;
+  return <div></div>;
 };
 
 export default Interests;

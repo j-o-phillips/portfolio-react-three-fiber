@@ -1,12 +1,15 @@
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import Display from "./Display";
 import ProjectArrows from "./ProjectArrows";
 import { useState } from "react";
+import { OrbitControls } from "@react-three/drei";
+import ProjectArrowsMobile from "./ProjectDetails";
+import ProjectDetails from "./ProjectDetails";
 
 const Projects = () => {
   const [projectNumber, setProjectNumber] = useState(0);
 
-  //width must be even and static for iframe to be positioned correctly
+  //width must be even for iframe to be positioned correctly
   let setWidth = window.innerWidth;
   if (setWidth % 2 !== 0) {
     setWidth = window.innerWidth - 1;
@@ -21,38 +24,45 @@ const Projects = () => {
   return (
     <>
       <div className="bg-[#120d14] pt-12">
-        <h3 className="text-center text-white text-5xl">Recent Projects</h3>
+        <h3 className="text-center text-white text-5xl mb-12">
+          Recent Projects
+        </h3>
 
         <div
-          className="flex justify-center items-center  h-[700px]"
+          className="flex justify-center items-center my-12"
           style={{ width: `${setWidth}px` }}
           id="overlay-cont"
         >
-          <div className="h-[700px] w-[1000px] ">
+          <div className="md:h-[480px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px]  w-[1000px] canvas-cont ">
             <Canvas
               className="r3f"
               camera={{
                 fov: 45,
                 near: 0.1,
                 far: 2000,
-                position: [-3, 1.5, 4],
+                position: setWidth < 600 ? [0, 1.2, 3] : [-3, 1.5, 4],
               }}
             >
               <Display projectNumber={projectNumber} />
+              <OrbitControls
+                target={setWidth < 600 ? [0, 0.3, 0] : [0, 0, 0]}
+                enableZoom={false}
+                enableRotate={false}
+                enablePan={false}
+              />
             </Canvas>
           </div>
-          <ProjectArrows
-            projectNumber={projectNumber}
-            setProjectNumber={setProjectNumber}
-          />
+          {setWidth > 600 && (
+            <ProjectArrows
+              projectNumber={projectNumber}
+              setProjectNumber={setProjectNumber}
+            />
+          )}
         </div>
-        <h5 className="text-center text-white text-4xl">Space Academy</h5>
-        <p className="text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-          amet voluptates tempora eos! Distinctio aspernatur illo dolore
-          quibusdam aliquid dignissimos modi voluptatum doloremque, nostrum
-          consequuntur nesciunt provident necessitatibus aliquam fugit?
-        </p>
+        <ProjectDetails
+          projectNumber={projectNumber}
+          setProjectNumber={setProjectNumber}
+        />
       </div>
     </>
   );

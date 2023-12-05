@@ -25,42 +25,47 @@ const ColorToggle = () => {
   return (
     <div className="mx-3 toggle-cont">
       <div
-        className="yellowIcon"
+        className="bg-[yellow]"
         onClick={() => {
           setColorData({
             base: "yellow",
+            vector: { r: 1.0, g: 1.0, b: 0.0 },
           });
         }}
       ></div>
       <div
-        className="blueIcon"
+        className="bg-[blue]"
         onClick={() => {
           setColorData({
             base: "blue",
+            vector: { r: 0.0, g: 0.0, b: 1.0 },
           });
         }}
       ></div>
       <div
-        className="redIcon"
+        className="bg-[red]"
         onClick={() => {
           setColorData({
             base: "red",
+            vector: { r: 1.0, g: 0.0, b: 0.0 },
           });
         }}
       ></div>
       <div
-        className="greenIcon"
+        className="bg-[green]"
         onClick={() => {
           setColorData({
             base: "green",
+            vector: { r: 0.0, g: 1.0, b: 0.0 },
           });
         }}
       ></div>
       <div
-        className="orangeIcon"
+        className="bg-[orange]"
         onClick={() => {
           setColorData({
             base: "orange",
+            vector: { r: 1.0, g: 0.5, b: 0.0 },
           });
         }}
       ></div>

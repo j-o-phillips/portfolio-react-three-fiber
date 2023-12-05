@@ -27,6 +27,12 @@
   justify-content: space-between;
 }
 
+.mob-arrow-component {
+  background-color: aqua;
+  height: 100px;
+  width: 100%;
+}
+
 .arrow-cont {
   width: 150px;
   height: 100%;
@@ -45,6 +51,15 @@
   border-bottom: 3px solid white;
 }
 
+.mob-arrow-left {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
 .arrow-right {
   width: 50px;
   height: 50px;
@@ -54,13 +69,13 @@
   border-top: 3px solid white;
 }
 
-.skill-card {
-  margin: 10px;
-
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  padding: 5px;
+.mob-arrow-right {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border-right: 3px solid white;
+  border-top: 3px solid white;
 }
 
 .skill-card-details {
@@ -95,26 +110,6 @@
   border-radius: 50%;
 }
 
-.yellowIcon {
-  background-color: yellow;
-}
-
-.blueIcon {
-  background-color: blue;
-}
-
-.redIcon {
-  background-color: red;
-}
-
-.greenIcon {
-  background-color: green;
-}
-
-.orangeIcon {
-  background-color: orange;
-}
-
 .ball {
   width: 15px;
   height: 15px;
@@ -123,4 +118,14 @@
   position: absolute;
   transition: all;
   transition-duration: 0.5s;
+}
+
+.canvas-cont {
+  height: 250px;
+}
+
+@media only screen and (min-width: 370px) {
+  .canvas-cont {
+    height: 300px;
+  }
 }

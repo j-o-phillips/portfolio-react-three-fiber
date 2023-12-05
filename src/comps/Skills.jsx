@@ -12,7 +12,7 @@ const Skills = () => {
         {skills.map((skill) => (
           <motion.div key={skill.name}>
             <Tilt
-              className="skill-card flex justify-center items-center text-white"
+              className="m-[10px] w-[78px] h-[78px] sm:w-[100px] sm:h-[100px] rounded-full p-[5px] flex justify-center items-center text-white"
               style={{
                 boxShadow: `${colorData.base} 5px 5px 40px -10px`,
                 backgroundImage: `linear-gradient(
@@ -26,8 +26,10 @@ const Skills = () => {
               }}
             >
               <div className="skill-card-details">
-                <i className={skill.iconClass} style={{ fontSize: "40px" }}></i>
-                <h5 className="text-sm">{skill.name}</h5>
+                <i
+                  className={`${skill.iconClass} text-[30px] sm:text-[40px]`}
+                ></i>
+                <h5 className="text-xs sm:text-sm">{skill.name}</h5>
               </div>
             </Tilt>
           </motion.div>

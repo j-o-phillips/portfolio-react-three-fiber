@@ -8,6 +8,7 @@ import {
   Text,
 } from "@react-three/drei";
 import { projects } from "../content/projects";
+import { useFrame } from "@react-three/fiber";
 
 export default function Display({ projectNumber }) {
   const computer = useGLTF(
@@ -56,12 +57,12 @@ export default function Display({ projectNumber }) {
         </Text>
         <Text
           fontSize={0.2}
-          position={[2, 0, 0.75]}
+          position={[2, 0.1, 0.75]}
           rotation-y={-1.25}
           maxWidth={2}
           textAlign="center"
         >
-          Timeframe: 1 week
+          {`${projects[projectNumber].timeFrame}, ${projects[projectNumber].team}`}
         </Text>
         <Text
           fontSize={0.2}
@@ -70,7 +71,7 @@ export default function Display({ projectNumber }) {
           maxWidth={2}
           textAlign="center"
         >
-          Team: Solo
+          Tech: {projects[projectNumber].tech}
         </Text>
       </Float>
       {/* </PresentationControls> */}

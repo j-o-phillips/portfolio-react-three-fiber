@@ -5,7 +5,7 @@ import ColorToggle from "./ColorToggle";
 const Navbar = () => {
   return (
     <nav className="w-full text-white h-[50px] flex justify-between items-center">
-      <Link className="mx-3">Jake Phillips</Link>
+      <Link className="mx-3"></Link>
       <ColorToggle />
     </nav>
   );
