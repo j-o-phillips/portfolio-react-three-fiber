@@ -14,6 +14,7 @@ export default function Display({ projectNumber }) {
   const computer = useGLTF(
     "https://threejs-journey.com/resources/models/macbook_model.gltf"
   );
+  const screenWidth = window.innerWidth;
 
   return (
     <>
@@ -46,33 +47,37 @@ export default function Display({ projectNumber }) {
             <iframe src={projects[projectNumber].website} />
           </Html>
         </primitive>
-        <Text
-          fontSize={0.3}
-          position={[2, 0.75, 0.75]}
-          rotation-y={-1.25}
-          maxWidth={2}
-          textAlign="center"
-        >
-          {projects[projectNumber].name}
-        </Text>
-        <Text
-          fontSize={0.2}
-          position={[2, 0.1, 0.75]}
-          rotation-y={-1.25}
-          maxWidth={2}
-          textAlign="center"
-        >
-          {`${projects[projectNumber].timeFrame}, ${projects[projectNumber].team}`}
-        </Text>
-        <Text
-          fontSize={0.2}
-          position={[2, -0.3, 0.75]}
-          rotation-y={-1.25}
-          maxWidth={2}
-          textAlign="center"
-        >
-          Tech: {projects[projectNumber].tech}
-        </Text>
+        {screenWidth > 600 && (
+          <>
+            <Text
+              fontSize={0.3}
+              position={[2, 0.75, 0.75]}
+              rotation-y={-1.25}
+              maxWidth={2}
+              textAlign="center"
+            >
+              {projects[projectNumber].name}
+            </Text>
+            <Text
+              fontSize={0.2}
+              position={[2, 0.1, 0.75]}
+              rotation-y={-1.25}
+              maxWidth={2}
+              textAlign="center"
+            >
+              {`${projects[projectNumber].timeFrame}, ${projects[projectNumber].team}`}
+            </Text>
+            <Text
+              fontSize={0.2}
+              position={[2, -0.3, 0.75]}
+              rotation-y={-1.25}
+              maxWidth={2}
+              textAlign="center"
+            >
+              Tech: {projects[projectNumber].tech}
+            </Text>
+          </>
+        )}
       </Float>
       {/* </PresentationControls> */}
       <ContactShadows position-y={-1.4} opacity={0.6} scale={5} blur={2.4} />

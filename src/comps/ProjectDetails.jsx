@@ -1,6 +1,9 @@
 import { projects } from "../content/projects";
+import { useThemeContext } from "../context/ThemeContext";
 
 const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
+  const { colorData } = useThemeContext();
+
   const handleToggleProjectLeft = () => {
     if (projectNumber !== 0) {
       setProjectNumber((prev) => prev - 1);
@@ -13,7 +16,7 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
   };
   return (
     <>
-      <div className="flex justify-center items-center">
+      <title className="flex justify-center items-center">
         <div className="text-white text-xs m-3">prev</div>
         <div
           className="mob-arrow-left mr-6"
@@ -27,14 +30,62 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
           onClick={handleToggleProjectRight}
         ></div>
         <div className="text-white text-xs m-3">next</div>
+      </title>
+      <section
+        className="text-white mt-7 flex flex-col items-center rounded-[10px] mx-20"
+        style={{
+          background: `linear-gradient(130deg, ${colorData.base}, 10%, #120d14)`,
+        }}
+      >
+        <h6 className="text-xl">Context: {projects[projectNumber].context}</h6>
+        <h6 className="text-xl">
+          Timeframe: {projects[projectNumber].timeFrame}
+        </h6>
+        <h6 className="text-xl">Team: {projects[projectNumber].team}</h6>
+        <p className="text-center p-5 mx-9">
+          {projects[projectNumber].description}
+        </p>
+      </section>
+      <div className="flex text-white justify-center gap-10 mt-5">
+        <a
+          href={projects[projectNumber].readme}
+          target="_blank"
+          className="m-[10px] w-[100px] h-[40px]  p-[5px] flex justify-center items-center text-white"
+          style={{
+            boxShadow: `${colorData.base} 10px 5px 40px -8px`,
+            borderRadius: "20px",
+            backgroundImage: `linear-gradient(
+              144deg,
+              ${colorData.base},
+              30%,
+              rgb(251, 251, 249),
+              75%,
+              #120d14
+            )`,
+          }}
+        >
+          <div className="button-details"> README</div>
+        </a>
+        <a
+          href={projects[projectNumber].website}
+          target="_blank"
+          className="m-[10px] w-[100px] h-[40px]  p-[5px] flex justify-center items-center text-white"
+          style={{
+            boxShadow: `${colorData.base} 10px 5px 40px -10px`,
+            borderRadius: "20px",
+            backgroundImage: `linear-gradient(
+              144deg,
+              ${colorData.base},
+              30%,
+              rgb(251, 251, 249),
+              75%,
+              #120d14
+            )`,
+          }}
+        >
+          <div className="button-details"> Site</div>
+        </a>
       </div>
-
-      <p className="text-white text-center p-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda amet
-        voluptates tempora eos! Distinctio aspernatur illo dolore quibusdam
-        aliquid dignissimos modi voluptatum doloremque, nostrum consequuntur
-        nesciunt provident necessitatibus aliquam fugit?
-      </p>
     </>
   );
 };

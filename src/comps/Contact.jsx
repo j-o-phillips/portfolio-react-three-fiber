@@ -7,8 +7,8 @@ const Contact = () => {
   return (
     <>
       <h3 className="text-center text-white text-5xl  bg-[#120d14]">Contact</h3>
-      <div className="md:flex-row flex-col-reverse flex gap-5 bg-[#120d14] justify-center pb-4">
-        <div className=" w-[45%] ">
+      <div className="md:flex-row flex-col flex gap-5 bg-[#120d14] justify-center pb-4">
+        <section className=" w-[100] md:w-[45%] mx-3 ">
           <form className="mt-12 flex flex-col gap-8">
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Name</span>
@@ -48,8 +48,8 @@ const Contact = () => {
               {loading ? "Sending..." : "Send"}
             </button>
           </form>
-        </div>
-        <div className="h-[600px] w-[45%]">
+        </section>
+        <div className="h-[600px] w-[100] md:w-[45%] mx-3">
           <div
             className="flex justify-center align-middle  rounded-[10px]"
             style={{
