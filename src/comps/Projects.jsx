@@ -8,23 +8,23 @@ import ProjectDetails from "./ProjectDetails";
 
 const Projects = () => {
   const [projectNumber, setProjectNumber] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth - 20);
 
   //width must be even for iframe to be positioned correctly
 
   if (screenWidth % 2 !== 0) {
-    setScreenWidth(window.innerWidth - 1);
+    setScreenWidth(window.innerWidth - 15);
     console.log("set odd");
   }
   window.addEventListener("resize", () => {
     if (screenWidth % 2 !== 0) {
-      setScreenWidth(window.innerWidth - 1);
+      setScreenWidth(window.innerWidth - 15);
     }
   });
 
   return (
     <>
-      <div className="bg-[#120d14] pt-12">
+      <div className="bg-[#120d14] pt-12" id="projects">
         <h3 className="text-center text-white text-5xl mb-12">
           Recent Projects
         </h3>

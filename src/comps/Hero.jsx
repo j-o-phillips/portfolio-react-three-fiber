@@ -5,18 +5,31 @@ import { OrbitControls } from "@react-three/drei";
 
 const Hero = () => {
   return (
-    <div className="h-screen ">
-      {" "}
-      <Canvas camera={{ position: [-10, 0, 0], fov: 25 }}>
-        <OrbitControls
-          enableZoom={false}
-          // autoRotate={true}
-          // autoRotateSpeed={1}
-        />
+    <>
+      <div className="h-screen ">
+        <div
+          className="text-gray-500 text-5xl absolute m-4 left-2 md:text-6xl md:left-12 md:top-16 "
+          style={{ fontFamily: "Open Sans, sans serif" }}
+        >
+          <h1>Jake Phillips</h1>
+        </div>
+        <div
+          className="text-gray-500 text-4xl absolute m-4 right-12 sub-title md:text-5xl"
+          style={{ fontFamily: "Montserrat, sans serif" }}
+        >
+          <h1>Developer</h1>
+        </div>
+        <Canvas camera={{ position: [-10, 0, 0], fov: 25 }}>
+          <OrbitControls
+            enableZoom={false}
+            // autoRotate={true}
+            // autoRotateSpeed={1}
+          />
 
-        <Blob />
-      </Canvas>
-    </div>
+          <Blob />
+        </Canvas>
+      </div>
+    </>
   );
 };
 

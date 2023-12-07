@@ -64,7 +64,7 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
             )`,
           }}
         >
-          <div className="button-details"> README</div>
+          <div className="button-details">Github</div>
         </a>
         <a
           href={projects[projectNumber].website}

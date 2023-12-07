@@ -10,12 +10,13 @@ const Experience = () => {
   const { colorData } = useThemeContext();
 
   return (
-    <div className="bg-[#120d14] pt-12">
+    <div className="bg-[#120d14] pt-12" id="experience">
       <h3 className="text-center text-white text-5xl mb-9">Experience</h3>
       <div className=" mx-12  text-white">
         <VerticalTimeline lineColor="white">
           {experience.map((role) => (
             <VerticalTimelineElement
+              key={role.company}
               className="vertical-timeline-element--work shadow-none"
               contentStyle={{
                 background: `linear-gradient(130deg, ${colorData.base}, 20%, #120d14)`,

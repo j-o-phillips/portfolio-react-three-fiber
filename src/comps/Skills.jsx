@@ -6,7 +6,7 @@ import { useThemeContext } from "../context/ThemeContext";
 const Skills = () => {
   const { colorData } = useThemeContext();
   return (
-    <div className="bg-[#120d14] flex-col justify-center pt-12">
+    <div className="bg-[#120d14] flex-col justify-center pt-12" id="skills">
       <h3 className="text-center text-white text-5xl mb-9">Skills</h3>
       <div className="flex  mx-12  justify-center items-center flex-wrap">
         {skills.map((skill) => (

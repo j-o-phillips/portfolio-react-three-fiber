@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [colorData, setColorData] = useState({
     base: "blue",
-    vector: { r: 0.0, g: 0.0, b: 1.0 },
+    vector: { r: 0.02, g: 0.0, b: 1.0 },
   });
   return (
     <ThemeContext.Provider value={{ colorData, setColorData }}>

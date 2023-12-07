@@ -29,7 +29,7 @@ const ColorToggle = () => {
         onClick={() => {
           setColorData({
             base: "yellow",
-            vector: { r: 1.0, g: 1.0, b: 0.0 },
+            vector: { r: 0.9, g: 0.8, b: 0.2 },
           });
         }}
       ></div>
@@ -38,7 +38,7 @@ const ColorToggle = () => {
         onClick={() => {
           setColorData({
             base: "blue",
-            vector: { r: 0.0, g: 0.0, b: 1.0 },
+            vector: { r: 0.02, g: 0.0, b: 1.0 },
           });
         }}
       ></div>
@@ -47,7 +47,7 @@ const ColorToggle = () => {
         onClick={() => {
           setColorData({
             base: "red",
-            vector: { r: 1.0, g: 0.0, b: 0.0 },
+            vector: { r: 1.0, g: 0.1, b: 0.1 },
           });
         }}
       ></div>
@@ -56,7 +56,7 @@ const ColorToggle = () => {
         onClick={() => {
           setColorData({
             base: "green",
-            vector: { r: 0.0, g: 1.0, b: 0.0 },
+            vector: { r: 0.1, g: 0.3, b: 0.05 },
           });
         }}
       ></div>

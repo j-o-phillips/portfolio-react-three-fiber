@@ -8,7 +8,7 @@ export const projects = [
     team: "Solo",
     tech: "React/Python-Django",
     context: "General Assembly",
-    readme: "",
+    readme: "https://github.com/j-o-phillips/spaceacademy-frontend",
     description: `A full stack web application built with React.js for the front end, 
     python and Django for the backend with a PostgreSQL database. 
     My end of course project is a gamified learning platform for children aged approx 8-16. 
@@ -28,5 +28,18 @@ export const projects = [
     A chore tracking app that allows users to create households, 
     invite other members to those households and update and 
     arrange the chores of that household using various CRUD operations. `,
+  },
+  {
+    name: "Minesweeper 3D",
+    website: "https://j-o-phillips.github.io/ga-unit_1-minesweeper/",
+    timeFrame: "1 week",
+    team: "Solo",
+    tech: "HTML/CSS/JS",
+    context: "General Assembly",
+    readme: "https://github.com/j-o-phillips/ga-unit_1-minesweeper",
+    description: `A clone of the classic game, Minesweeper built with HTML, CSS and Javascript. 
+    The idea was to get as close to the original game in both style and functionality,
+     to demonstrate a firm grasp of the principal concepts of Javascript. 
+     I also added a 3d mode as a fun extra!`,
   },
 ];
