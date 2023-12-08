@@ -36,7 +36,7 @@ const Blob = () => {
   return (
     <>
       <mesh>
-        <sphereGeometry args={[1, 100, 100]} />
+        <sphereGeometry args={[1, 3, 3]} />
         <shaderMaterial
           ref={blobMat}
           vertexShader={vertexShader}
