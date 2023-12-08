@@ -15,10 +15,10 @@ export const skills = [
     name: "React",
     iconClass: "devicon-react-plain colored",
   },
-  {
-    name: "Next.js",
-    iconClass: "devicon-nextjs-original colored",
-  },
+  // {
+  //   name: "Next.js",
+  //   iconClass: "cib-next-js",
+  // },
   {
     name: "Vue.js",
     iconClass: "devicon-vuejs-plain colored",
@@ -43,10 +43,10 @@ export const skills = [
     name: "Github",
     iconClass: "devicon-github-original",
   },
-  {
-    name: "Three.js",
-    iconClass: "devicon-threejs-original",
-  },
+  // {
+  //   name: "Three.js",
+  //   iconClass: "devicon-threejs-original-wordmark",
+  // },
   {
     name: "MongoDB",
     iconClass: "devicon-mongodb-plain colored",
@@ -60,8 +60,8 @@ export const skills = [
     iconClass: "devicon-bootstrap-plain",
   },
 
-  {
-    name: "Tailwind",
-    iconClass: "devicon-tailwindcss-plain",
-  },
+  // {
+  //   name: "Tailwind",
+  //   iconClass: "devicon-tailwindcss-plain",
+  // },
 ];

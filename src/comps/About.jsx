@@ -18,15 +18,15 @@ const About = () => {
             background: `linear-gradient(130deg, ${colorData.base}, 10%, #120d14)`,
           }}
         >
-          <article className="text-white p-3">
-            <h1 className="text-4xl text-center">{title}</h1>
-            <p className="text-lg mx-5 my-3">
+          <article className="text-white md:p-3">
+            <h1 className="text-3xl text-center md:text-4xl">{title}</h1>
+            <p className="text-md mx-5 my-3 md:text-lg">
               As a musician, my ultimate goal was to make a powerful impression
               on an audience. I’m striving to achieve the same thing as a
               developer, by building software that makes an impact.{" "}
             </p>
 
-            <p className="mx-5 my-3">
+            <p className="mx-5 my-3 text-sm md:text-md">
               {" "}
               My interest in software engineering began some years ago as a
               hobby, building simple Unity games or designing websites for
@@ -34,7 +34,7 @@ const About = () => {
               of an obsession, so much so that I decided to make a career
               transition.{" "}
             </p>
-            <p className="mx-5 my-3">
+            <p className="mx-5 my-3 text-sm md:text-md">
               {" "}
               As a former classical violinist I have played with some of the top
               orchestras in the world, and am used to high-pressure,
@@ -42,7 +42,7 @@ const About = () => {
               personal study and learning never stop. Click the play button to
               hear a sample of my work as a violinist.{" "}
             </p>
-            <p className="text-lg mx-5 my-3">
+            <p className="text-md mx-5 my-3 md:text-lg">
               {" "}
               I hope to bring the same passion and dedication to my career in
               software engineering.

@@ -16,7 +16,7 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
   };
   return (
     <>
-      <title className="flex justify-center items-center">
+      <title className="flex justify-center items-center bg-[#120d14]">
         <div className="text-white text-xs m-3">prev</div>
         <div
           className="mob-arrow-left mr-6"
@@ -32,7 +32,7 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
         <div className="text-white text-xs m-3">next</div>
       </title>
       <section
-        className="text-white mt-7 flex flex-col items-center rounded-[10px] mx-20"
+        className="text-white mt-7 flex flex-col items-center rounded-[10px] mx-2 md:mx-20 bg-[#120d14]"
         style={{
           background: `linear-gradient(130deg, ${colorData.base}, 10%, #120d14)`,
         }}
@@ -42,7 +42,7 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
           Timeframe: {projects[projectNumber].timeFrame}
         </h6>
         <h6 className="text-xl">Team: {projects[projectNumber].team}</h6>
-        <p className="text-center p-5 mx-9">
+        <p className="text-center text-sm p-5 mx-1 md:mx-9 md:text-md">
           {projects[projectNumber].description}
         </p>
       </section>

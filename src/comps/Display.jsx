@@ -9,12 +9,41 @@ import {
 } from "@react-three/drei";
 import { projects } from "../content/projects";
 import { useFrame } from "@react-three/fiber";
+import { useEffect, useState } from "react";
+
+function debounce(fn, ms) {
+  let timer;
+  return (_) => {
+    clearTimeout(timer);
+    timer = setTimeout((_) => {
+      timer = null;
+      fn.apply(this, arguments);
+    }, ms);
+  };
+}
 
 export default function Display({ projectNumber }) {
   const computer = useGLTF(
     "https://threejs-journey.com/resources/models/macbook_model.gltf"
   );
-  const screenWidth = window.innerWidth;
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  console.log(screenWidth);
+
+  useEffect(() => {
+    // const debouncedResize = debounce(function handleResize() {
+    //   console.log(window.innerWidth);
+    //   setScreenWidth(window.innerWidth);
+
+    // }, 1000);
+    function debouncedResize() {
+      setScreenWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", debouncedResize);
+    return (_) => {
+      window.removeEventListener("resize", debouncedResize);
+    };
+  });
 
   return (
     <>
@@ -42,6 +71,9 @@ export default function Display({ projectNumber }) {
             wrapperClass="htmlScreen"
             distanceFactor={1.17}
             position={[0, 1.56, -1.4]}
+            // position={
+            //   screenWidth % 2 !== 0 ? [0, 1.55, -1.5] : [-0.43, 1.56, -1.69]
+            // }
             rotation-x={-0.256}
           >
             <iframe src={projects[projectNumber].website} />

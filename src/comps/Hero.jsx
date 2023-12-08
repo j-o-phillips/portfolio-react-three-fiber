@@ -8,13 +8,13 @@ const Hero = () => {
     <>
       <div className="h-screen ">
         <div
-          className="text-gray-500 text-5xl absolute m-4 left-2 md:text-6xl md:left-12 md:top-16 "
+          className="text-gray-500 text-5xl absolute m-4 left-2 top-16 md:text-6xl md:left-12 md:top-16 "
           style={{ fontFamily: "Open Sans, sans serif" }}
         >
           <h1>Jake Phillips</h1>
         </div>
         <div
-          className="text-gray-500 text-4xl absolute m-4 right-12 sub-title md:text-5xl"
+          className="text-gray-500 text-4xl absolute m-4 right-2 bottom-20 sub-title md:text-5xl md:right-12"
           style={{ fontFamily: "Montserrat, sans serif" }}
         >
           <h1>Developer</h1>

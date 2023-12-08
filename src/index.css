@@ -6,7 +6,7 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
-
+  background-color: #120d14;
   box-sizing: border-box;
 }
 
@@ -145,17 +145,5 @@ body {
 @media only screen and (min-width: 370px) {
   .canvas-cont {
     height: 300px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .sub-title {
-    top: 105px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .sub-title {
-    bottom: 60px;
   }
 }
