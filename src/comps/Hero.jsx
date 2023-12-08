@@ -6,7 +6,7 @@ import { OrbitControls } from "@react-three/drei";
 const Hero = () => {
   return (
     <>
-      <div className="h-screen ">
+      <div className="h-screen  ">
         <div
           className="text-gray-500 text-5xl absolute m-4 left-2 top-16 md:text-6xl md:left-12 md:top-16 "
           style={{ fontFamily: "Open Sans, sans serif" }}
@@ -19,13 +19,7 @@ const Hero = () => {
         >
           <h1>Developer</h1>
         </div>
-        <Canvas camera={{ position: [-10, 0, 0], fov: 25 }}>
-          <OrbitControls
-            enableZoom={false}
-            // autoRotate={true}
-            // autoRotateSpeed={1}
-          />
-
+        <Canvas camera={{ position: [-10, 0, 0], fov: 25, near: 5, far: 10 }}>
           <Blob />
         </Canvas>
       </div>
