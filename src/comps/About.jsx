@@ -1,9 +1,16 @@
 import React from "react";
 import { useThemeContext } from "../context/ThemeContext";
+import track from "../assets/haydn3.wav";
 
 const About = () => {
   const { colorData } = useThemeContext();
-  const title = `Classical Violinist --> Developer`;
+  const audio = new Audio(track);
+  audio.load();
+
+  const playAudio = () => {
+    audio.play();
+  };
+  const title = `Classical Violinist to Developer`;
   return (
     <div
       className="md:flex-row flex-col flex gap-4 bg-[#120d14] justify-center"
@@ -50,7 +57,12 @@ const About = () => {
           </article>
         </div>
       </section>
-      <section className={`h-[400px] w-[100] md:w-[45%] mx-3`}></section>
+      <section className={`h-[400px] w-[100] md:w-[45%] mx-3`}>
+        <div
+          className="h-[200px] w-[200px] bg-amber-300"
+          onClick={playAudio}
+        ></div>
+      </section>
     </div>
   );
 };
