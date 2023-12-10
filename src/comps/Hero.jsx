@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
         <div
           className="text-gray-500 text-4xl absolute m-4 right-4 bottom-20 sub-title md:text-5xl md:right-20"
-          style={{ fontFamily: "Montserrat, sans serif" }}
+          style={{ fontFamily: "Open Sans, sans serif" }}
         >
           <h1>Developer</h1>
         </div>
