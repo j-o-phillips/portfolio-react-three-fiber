@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useThemeContext } from "../context/ThemeContext";
 import emailjs from "@emailjs/browser";
+import headshot from "../assets/images/headshot1crop.jpg";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
   const { colorData } = useThemeContext();
@@ -95,16 +98,49 @@ const Contact = () => {
             </button>
           </form>
         </section>
-        <div className="h-[600px] w-[100] md:w-[45%] mx-3">
+        <section className=" w-[100] md:w-[45%] mx-3">
           <div
-            className="flex justify-center align-middle  rounded-[10px]"
+            className="flex flex-col justify-center items-center rounded-[10px] gap-4"
             style={{
               width: "100%",
               height: "100%",
               background: `linear-gradient(310deg, ${colorData.base}, 20%, #120d14)`,
             }}
-          ></div>
-        </div>
+          >
+            <div
+              className="m-[10px] w-[250px] h-[250px] rounded-full p-[5px] flex justify-center items-center mt-20"
+              style={{
+                boxShadow: `${colorData.base} 5px 5px 40px -10px`,
+                backgroundImage: `linear-gradient(
+                144deg,
+                ${colorData.base},
+                30%,
+                rgb(251, 251, 249),
+                75%,
+                #120d14
+              )`,
+              }}
+            >
+              <div className="flex flex-col justify-center items-center rounded-full">
+                <img
+                  src={headshot}
+                  alt="Jake Phillips headshot"
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/jake-phillips-developer/"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                style={{ color: "#0a66c2" }}
+                className="mb-20 text-5xl"
+              />
+            </a>
+          </div>
+        </section>
       </div>
     </div>
   );
