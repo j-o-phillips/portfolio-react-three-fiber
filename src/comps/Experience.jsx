@@ -10,8 +10,8 @@ const Experience = () => {
   const { colorData } = useThemeContext();
 
   return (
-    <div className="bg-[#120d14] pt-12" id="experience">
-      <h3 className="text-center text-white text-5xl mb-9">Experience</h3>
+    <div className="bg-[#120d14] pt-14" id="experience">
+      <h3 className="text-center text-white text-5xl mb-12">Experience</h3>
       <div className=" mx-2 md:mx-12  text-white">
         <VerticalTimeline lineColor="white">
           {experience.map((role) => (

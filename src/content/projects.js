@@ -18,7 +18,7 @@ export const projects = [
   },
   {
     name: "Chortle",
-    website: "https://choretle.vercel.app/",
+    website: "https://chortle-mk-2.vercel.app/",
     timeFrame: "1 week",
     team: "3 members",
     tech: "Next.js",
@@ -28,6 +28,20 @@ export const projects = [
     A chore tracking app that allows users to create households, 
     invite other members to those households and update and 
     arrange the chores of that household using various CRUD operations. `,
+  },
+  {
+    name: "Spotify Pods",
+    website: "https://pods-ga.netlify.app/",
+    timeFrame: "1 week",
+    team: "Solo",
+    tech: "MEVN",
+    context: "General Assembly",
+    readme: "",
+    description: `A full stack web application using Vue.js for the frontend, 
+     Express.js and Node.js for the backend with a MongoDB database. 
+     By consuming the Spotify API, this app allows users to access and update their personal playlists,
+      form groups (pods) of friends and create, 
+    update and comment on pod playlists which can then be synced to the user’s spotify account. `,
   },
   {
     name: "Minesweeper 3D",

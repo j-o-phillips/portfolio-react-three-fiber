@@ -6,9 +6,9 @@ import { useThemeContext } from "../context/ThemeContext";
 const Skills = () => {
   const { colorData } = useThemeContext();
   return (
-    <div className="bg-[#120d14] flex-col justify-center pt-12" id="skills">
+    <div className="bg-[#120d14] flex-col justify-center pt-14" id="skills">
       <h3 className="text-center text-white text-5xl mb-9">Skills</h3>
-      <div className="flex  mx-12  justify-center items-center flex-wrap">
+      <div className="flex  mx-12  justify-center items-center flex-wrap mt-12">
         <motion.div>
           <Tilt
             className="m-[10px] w-[78px] h-[78px] sm:w-[100px] sm:h-[100px] rounded-full p-[5px] flex justify-center items-center text-white"

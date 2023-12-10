@@ -8,6 +8,7 @@ import Projects from "./comps/Projects";
 import Experience from "./comps/Experience";
 import Contact from "./comps/Contact";
 import Interests from "./comps/Interests";
+import Footer from "./comps/Footer";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Experience />
       <Interests />
       <Contact />
+      <Footer />
     </BrowserRouter>
   );
 };

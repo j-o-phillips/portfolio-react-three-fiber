@@ -39,10 +39,10 @@ const Projects = () => {
   return (
     <>
       <div
-        className="bg-[#120d14] pt-12 flex-col items-center justify-center"
+        className="bg-[#120d14] pt-14 flex-col items-center justify-center"
         id="projects"
       >
-        <h3 className="text-center text-white text-5xl mb-12">
+        <h3 className="text-center text-white text-5xl mb-4">
           Recent Projects
         </h3>
 

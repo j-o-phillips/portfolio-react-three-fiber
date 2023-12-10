@@ -43,9 +43,9 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div className="pt-14">
       <h3
-        className="text-center text-white text-5xl  bg-[#120d14]"
+        className="text-center text-white text-5xl  bg-[#120d14] mb-9"
         id="contact"
       >
         Contact
@@ -106,7 +106,7 @@ const Contact = () => {
           ></div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

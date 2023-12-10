@@ -1,16 +1,11 @@
 import React from "react";
 import { useThemeContext } from "../context/ThemeContext";
-import track from "../assets/haydn3.wav";
+
+import AudioPlayer from "./AudioPlayer";
 
 const About = () => {
   const { colorData } = useThemeContext();
-  const audio = new Audio(track);
-  audio.load();
 
-  const playAudio = () => {
-    audio.play();
-  };
-  const title = `Classical Violinist to Developer`;
   return (
     <div
       className="md:flex-row flex-col flex gap-4 bg-[#120d14] justify-center"
@@ -26,7 +21,9 @@ const About = () => {
           }}
         >
           <article className="text-white md:p-3">
-            <h1 className="text-3xl text-center md:text-4xl">{title}</h1>
+            <h1 className="text-3xl text-center md:text-4xl">
+              Classical Violinist to Developer
+            </h1>
             <p className="text-md mx-5 my-3 md:text-lg">
               As a musician, my ultimate goal was to make a powerful impression
               on an audience. I’m striving to achieve the same thing as a
@@ -57,11 +54,10 @@ const About = () => {
           </article>
         </div>
       </section>
-      <section className={`h-[400px] w-[100] md:w-[45%] mx-3`}>
-        <div
-          className="h-[200px] w-[200px] bg-amber-300"
-          onClick={playAudio}
-        ></div>
+      <section
+        className={`h-[400px] w-[100] md:w-[45%] mx-3 flex justify-center items-center`}
+      >
+        <AudioPlayer />
       </section>
     </div>
   );
