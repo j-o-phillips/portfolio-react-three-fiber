@@ -24,7 +24,10 @@ const Skills = () => {
             )`,
             }}
           >
-            <div className="skill-card-details">
+            <div
+              className="flex flex-col justify-center items-center h-full w-full rounded-full"
+              style={{ backgroundColor: "rgb(5, 6, 45)" }}
+            >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                 className="h-[30px] sm:h-[40px]  bg-white rounded-full border-none"
@@ -49,7 +52,10 @@ const Skills = () => {
             )`,
               }}
             >
-              <div className="skill-card-details">
+              <div
+                className="flex flex-col justify-center items-center h-full w-full rounded-full"
+                style={{ backgroundColor: "rgb(5, 6, 45)" }}
+              >
                 <i
                   className={`${skill.iconClass} text-[30px] sm:text-[40px]`}
                 ></i>
@@ -73,7 +79,10 @@ const Skills = () => {
             )`,
             }}
           >
-            <div className="skill-card-details">
+            <div
+              className="flex flex-col justify-center items-center h-full w-full rounded-full"
+              style={{ backgroundColor: "rgb(5, 6, 45)" }}
+            >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"
                 className="h-[30px] sm:h-[40px]  bg-white rounded-full border-none"
@@ -98,7 +107,10 @@ const Skills = () => {
             )`,
             }}
           >
-            <div className="skill-card-details">
+            <div
+              className="flex flex-col justify-center items-center h-full w-full rounded-full"
+              style={{ backgroundColor: "rgb(5, 6, 45)" }}
+            >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
                 className="h-[30px] sm:h-[40px] rounded-full border-none"

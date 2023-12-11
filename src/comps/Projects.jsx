@@ -32,8 +32,6 @@ const Projects = () => {
         </h3>
 
         <div
-          // className="md:h-[480px] lg:h-[600px] xl:h-[700px]
-          // 2xl:h-[800px] w-[320px] sm:w-[600px] md:w-[768px] lg:w-[1024px] canvas-cont "
           className="w-100 md:h-[480px] lg:h-[600px] xl:h-[700px]
            2xl:h-[800px] canvas-cont  "
         >
@@ -43,7 +41,6 @@ const Projects = () => {
               fov: 45,
               near: 0.1,
               far: 2000,
-              // position: screenWidth < 600 ? [0, 1.2, 3] : [-3, 1.5, 4],
               position: [-3, 1.5, 4],
             }}
           >

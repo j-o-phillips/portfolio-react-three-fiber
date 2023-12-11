@@ -19,14 +19,22 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
       <title className="flex justify-center items-center bg-[#120d14]">
         <div className="text-white text-xs m-3">prev</div>
         <div
-          className="mob-arrow-left mr-6"
+          className="h-[25px] w-[25px] transform rotate-[45deg] mr-6"
+          style={{
+            borderLeft: "3px solid white",
+            borderBottom: "3px solid white",
+          }}
           onClick={handleToggleProjectLeft}
         ></div>
         <h5 className=" text-white text-xl sm:text-4xl  text-center">
           {projects[projectNumber].name}
         </h5>
         <div
-          className="mob-arrow-right ml-6"
+          className="h-[25px] w-[25px] transform rotate-[45deg]  ml-6"
+          style={{
+            borderTop: "3px solid white",
+            borderRight: "3px solid white",
+          }}
           onClick={handleToggleProjectRight}
         ></div>
         <div className="text-white text-xs m-3">next</div>
@@ -64,7 +72,12 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
             )`,
           }}
         >
-          <div className="button-details">Github</div>
+          <div
+            className="flex flex-col justify-center items-center h-full w-full rounded-full"
+            style={{ backgroundColor: "rgb(5, 6, 45)" }}
+          >
+            Github
+          </div>
         </a>
         <a
           href={projects[projectNumber].website}
@@ -83,7 +96,13 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
             )`,
           }}
         >
-          <div className="button-details"> Site</div>
+          <div
+            className="flex flex-col justify-center items-center h-full w-full rounded-full"
+            style={{ backgroundColor: "rgb(5, 6, 45)" }}
+          >
+            {" "}
+            Site
+          </div>
         </a>
       </div>
     </>

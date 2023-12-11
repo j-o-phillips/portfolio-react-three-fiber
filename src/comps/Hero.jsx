@@ -1,5 +1,4 @@
 import { Canvas } from "@react-three/fiber";
-import React, { useEffect, useState } from "react";
 import Blob from "./Blob";
 
 const Hero = () => {

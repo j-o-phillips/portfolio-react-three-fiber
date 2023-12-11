@@ -2,25 +2,12 @@ import {
   useGLTF,
   Environment,
   Float,
-  PresentationControls,
   ContactShadows,
   Html,
   Text,
 } from "@react-three/drei";
 import { projects } from "../content/projects";
-import { useFrame } from "@react-three/fiber";
 import { useEffect, useState } from "react";
-
-function debounce(fn, ms) {
-  let timer;
-  return (_) => {
-    clearTimeout(timer);
-    timer = setTimeout((_) => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}
 
 export default function Display({ projectNumber }) {
   const computer = useGLTF(
@@ -30,18 +17,13 @@ export default function Display({ projectNumber }) {
   console.log(screenWidth);
 
   useEffect(() => {
-    // const debouncedResize = debounce(function handleResize() {
-    //   console.log(window.innerWidth);
-    //   setScreenWidth(window.innerWidth);
-
-    // }, 1000);
-    function debouncedResize() {
+    function resize() {
       setScreenWidth(window.innerWidth);
     }
 
-    window.addEventListener("resize", debouncedResize);
+    window.addEventListener("resize", resize);
     return (_) => {
-      window.removeEventListener("resize", debouncedResize);
+      window.removeEventListener("resize", resize);
     };
   });
 
@@ -49,13 +31,7 @@ export default function Display({ projectNumber }) {
     <>
       <Environment preset="city" />
       <color args={["#120d14"]} attach="background" />
-      {/* <PresentationControls
-        rotation={[0.13, 0.1, 0]}
-        polar={[-0.4, 0.2]}
-        azimuth={[-1, 0.75]}
-        config={{ mass: 2, tension: 400 }}
-        snap={{ mass: 4, tension: 400 }}
-      > */}
+
       <Float rotationIntensity={0.4}>
         <rectAreaLight
           width={2.5}
@@ -71,9 +47,6 @@ export default function Display({ projectNumber }) {
             wrapperClass="htmlScreen"
             distanceFactor={1.17}
             position={[0, 1.56, -1.4]}
-            // position={
-            //   screenWidth % 2 !== 0 ? [0, 1.55, -1.5] : [-0.43, 1.56, -1.69]
-            // }
             rotation-x={-0.256}
           >
             <iframe src={projects[projectNumber].website} />
@@ -111,7 +84,6 @@ export default function Display({ projectNumber }) {
           </>
         )}
       </Float>
-      {/* </PresentationControls> */}
       <ContactShadows position-y={-1.4} opacity={0.6} scale={5} blur={2.4} />
     </>
   );

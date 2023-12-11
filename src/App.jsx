@@ -13,10 +13,8 @@ import Footer from "./comps/Footer";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="bg-[#120d14]">
-        <Navbar />
-        <Hero />
-      </div>
+      <Navbar />
+      <Hero />
       <About />
       <Skills />
       <Projects />

@@ -41,16 +41,33 @@ const AudioPlayer = () => {
     )`,
       }}
     >
-      <div className="player-details">
+      <div
+        className="flex items-center h-full w-full rounded-full"
+        style={{ backgroundColor: "rgb(5, 6, 45)" }}
+      >
         <audio ref={audio} src={track} />
-        <div className="player-left" onClick={handleTogglePlay}>
+        <div
+          className="flex justify-center items-center cursor-pointer ml-[10px] h-[170px] w-[120px]"
+          style={{
+            borderRadius: "500px 0 0 500px ",
+            border: "2px solid white",
+          }}
+          onClick={handleTogglePlay}
+        >
           {!isPlaying ? (
             <FontAwesomeIcon icon={faPlay} className="text-4xl ml-3" />
           ) : (
             <FontAwesomeIcon icon={faPause} className="text-4xl ml-3" />
           )}
         </div>
-        <div className="player-right" onClick={handleStop}>
+        <div
+          className="flex justify-center items-center cursor-pointer ml-[10px] h-[170px] w-[120px]"
+          style={{
+            borderRadius: "0 500px 500px 0",
+            border: "2px solid white",
+          }}
+          onClick={handleStop}
+        >
           <FontAwesomeIcon icon={faStop} className="text-4xl mr-1" />
         </div>
         <div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import ColorToggle from "./ColorToggle";
 import close from "../assets/close.svg";
 import menu from "../assets/menu.svg";

@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { useThemeContext } from "../context/ThemeContext";
 import emailjs from "@emailjs/browser";
 import headshot from "../assets/images/headshot1crop.jpg";
-import {
-  faLinkedin,
-  faGithub,
-  faSquareGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 

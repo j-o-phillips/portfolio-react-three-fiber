@@ -90,16 +90,7 @@ float cnoise(vec3 P)
 }
 
 void main() {
-    // Transform vertex to world and view space
-  
-
-    // Calculate the normal in view space (modelViewMatrix is used to transform normals)
     
-
-    // Add random elevation using Perlin noise along the normal direction
-//     float elevation = cnoise(vec3(
-//     normal.x, normal.y , uTime * 0.1)) * 
-//    0.5;
 
 float elevation = cnoise(vec3(
     position + (uTime * 0.2 )) * 0.5); 

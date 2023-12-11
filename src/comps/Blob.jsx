@@ -1,5 +1,3 @@
-import { ContactShadows, OrbitControls } from "@react-three/drei";
-import { useControls } from "leva";
 import vertexShader from "../shaders/blob/vertex.glsl";
 import fragmentShader from "../shaders/blob/fragment.glsl";
 import { useFrame } from "@react-three/fiber";

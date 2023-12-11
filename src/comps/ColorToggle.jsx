@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { useThemeContext } from "../context/ThemeContext";
 
 const ColorToggle = () => {
@@ -23,9 +22,12 @@ const ColorToggle = () => {
       break;
   }
   return (
-    <div className="mx-3 toggle-cont">
+    <div
+      className="mx-3 w-[102px] h-[24px] flex justify-between items-center p-[2px] relative cursor-pointer"
+      style={{ border: "2px solid white", borderRadius: "30px" }}
+    >
       <div
-        className="bg-[yellow]"
+        className="bg-[yellow] w-[15px] h-[15px] rounded-full"
         onClick={() => {
           setColorData({
             base: "yellow",
@@ -34,7 +36,7 @@ const ColorToggle = () => {
         }}
       ></div>
       <div
-        className="bg-[blue]"
+        className="bg-[blue] w-[15px] h-[15px] rounded-full"
         onClick={() => {
           setColorData({
             base: "blue",
@@ -43,7 +45,7 @@ const ColorToggle = () => {
         }}
       ></div>
       <div
-        className="bg-[red]"
+        className="bg-[red] w-[15px] h-[15px] rounded-full"
         onClick={() => {
           setColorData({
             base: "red",
@@ -52,7 +54,7 @@ const ColorToggle = () => {
         }}
       ></div>
       <div
-        className="bg-[green]"
+        className="bg-[green] w-[15px] h-[15px] rounded-full"
         onClick={() => {
           setColorData({
             base: "green",
@@ -61,7 +63,7 @@ const ColorToggle = () => {
         }}
       ></div>
       <div
-        className="bg-[orange]"
+        className="bg-[orange] w-[15px] h-[15px] rounded-full"
         onClick={() => {
           setColorData({
             base: "orange",
@@ -69,7 +71,15 @@ const ColorToggle = () => {
           });
         }}
       ></div>
-      <div className="ball" style={{ left: ballOffset }}></div>
+      <div
+        className="w-[15px] h-[15px] rounded-full absolute"
+        style={{
+          left: ballOffset,
+          backgroundColor: "#868686",
+          transition: "all",
+          transitionDuration: "0.5s",
+        }}
+      ></div>
     </div>
   );
 };
