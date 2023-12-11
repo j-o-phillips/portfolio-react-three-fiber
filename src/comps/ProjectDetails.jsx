@@ -19,7 +19,7 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
       <title className="flex justify-center items-center bg-[#120d14]">
         <div className="text-white text-xs m-3">prev</div>
         <div
-          className="h-[25px] w-[25px] transform rotate-[45deg] mr-6"
+          className="h-[25px] w-[25px] transform rotate-[45deg] mr-6 cursor-pointer"
           style={{
             borderLeft: "3px solid white",
             borderBottom: "3px solid white",
@@ -30,7 +30,7 @@ const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
           {projects[projectNumber].name}
         </h5>
         <div
-          className="h-[25px] w-[25px] transform rotate-[45deg]  ml-6"
+          className="h-[25px] w-[25px] transform rotate-[45deg] cursor-pointer  ml-6"
           style={{
             borderTop: "3px solid white",
             borderRight: "3px solid white",
