@@ -9,6 +9,7 @@ import { useThemeContext } from "../context/ThemeContext";
 const Blob = () => {
   const { colorData } = useThemeContext();
   const blobMat = useRef();
+  const yPos = window.innerWidth < 600 ? -0.5 : 0;
 
   const colors = {
     depthColor: { r: 0.0, g: 0.0, b: 0.0 },
@@ -35,8 +36,8 @@ const Blob = () => {
   });
   return (
     <>
-      <mesh>
-        <sphereGeometry args={[1, 30, 30]} />
+      <mesh position={[0, yPos, 0]}>
+        <sphereGeometry args={[1, 40, 40]} />
         <shaderMaterial
           ref={blobMat}
           vertexShader={vertexShader}

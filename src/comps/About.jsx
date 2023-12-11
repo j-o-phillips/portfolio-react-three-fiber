@@ -43,8 +43,8 @@ const About = () => {
               As a former classical violinist I have played with some of the top
               orchestras in the world, and am used to high-pressure,
               high-performance environments. It's also an industry where
-              personal study and learning never stop. Click the play button to
-              hear a sample of my work as a violinist.{" "}
+              personal study and learning never stop. Click play to hear a
+              sample of my work as a violinist.{" "}
             </p>
             <p className="text-md mx-5 my-3 md:text-lg">
               {" "}
@@ -55,9 +55,13 @@ const About = () => {
         </div>
       </section>
       <section
-        className={`h-[400px] w-[100] md:w-[45%] mx-3 flex justify-center items-center`}
+        className={` w-[100] md:w-[45%] mx-3 my-4 flex flex-col justify-center items-center`}
       >
         <AudioPlayer />
+        <p className="text-white text-sm mx-10 mt-2">
+          An exerpt of Haydn String Quartet op.20 no.4, with some friends at the
+          Thy Chamber Music Festival, 2017{" "}
+        </p>
       </section>
     </div>
   );

@@ -23,7 +23,7 @@ export const projects = [
     team: "3 members",
     tech: "Next.js",
     context: "General Assembly",
-    readme: "",
+    readme: "https://github.com/j-o-phillips/chortleMK2",
     description: `A full stack web application built with Next.js with a MongoDB database. 
     A chore tracking app that allows users to create households, 
     invite other members to those households and update and 
@@ -36,7 +36,7 @@ export const projects = [
     team: "Solo",
     tech: "MEVN",
     context: "General Assembly",
-    readme: "",
+    readme: "https://github.com/j-o-phillips/ga-unit_2-frontend",
     description: `A full stack web application using Vue.js for the frontend, 
      Express.js and Node.js for the backend with a MongoDB database. 
      By consuming the Spotify API, this app allows users to access and update their personal playlists,

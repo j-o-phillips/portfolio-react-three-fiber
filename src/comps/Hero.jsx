@@ -1,9 +1,10 @@
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Blob from "./Blob";
-import { OrbitControls } from "@react-three/drei";
 
 const Hero = () => {
+  const zoom = window.innerWidth < 600 ? -20 : -10;
+
   return (
     <>
       <div className="h-screen  ">
@@ -14,12 +15,12 @@ const Hero = () => {
           <h1>Jake Phillips</h1>
         </div>
         <div
-          className="text-gray-400 text-4xl absolute m-4 left-8 top-32 sub-title md:text-5xl md:left-28"
+          className="text-gray-400 text-4xl absolute m-4 left-8 top-28 sub-title md:text-5xl md:left-28 md:top-32"
           style={{ fontFamily: "Open Sans, sans serif" }}
         >
           <h1>Developer</h1>
         </div>
-        <Canvas camera={{ position: [-20, 0, 0], fov: 25, near: 5, far: 20 }}>
+        <Canvas camera={{ position: [zoom, 0, 0], fov: 25, near: 5, far: 20 }}>
           <Blob />
         </Canvas>
       </div>

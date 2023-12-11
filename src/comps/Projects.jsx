@@ -1,31 +1,16 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import Display from "./Display";
-import ProjectArrows from "./ProjectArrows";
+
 import { useEffect, useState } from "react";
 import { OrbitControls } from "@react-three/drei";
-import ProjectArrowsMobile from "./ProjectDetails";
-import ProjectDetails from "./ProjectDetails";
 
-function debounce(fn, ms) {
-  let timer;
-  return (_) => {
-    clearTimeout(timer);
-    timer = setTimeout((_) => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}
+import ProjectDetails from "./ProjectDetails";
 
 const Projects = () => {
   const [projectNumber, setProjectNumber] = useState(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    // const debouncedResize = debounce(function handleResize() {
-    //   setScreenWidth(window.innerWidth);
-    // }, 1000);
-
     function debouncedResize() {
       setScreenWidth(window.innerWidth);
     }

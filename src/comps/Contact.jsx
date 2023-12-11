@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { useThemeContext } from "../context/ThemeContext";
 import emailjs from "@emailjs/browser";
 import headshot from "../assets/images/headshot1crop.jpg";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faSquareGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   const { colorData } = useThemeContext();
@@ -11,6 +16,8 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
+  const myEmail = "jphillips105@gmail.com";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -129,16 +136,41 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <a
-              href="https://www.linkedin.com/in/jake-phillips-developer/"
-              target="_blank"
-            >
+            <div className="flex gap-2">
+              <a
+                href="https://www.linkedin.com/in/jake-phillips-developer/"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  style={{ color: "white" }}
+                  className="text-5xl"
+                />
+              </a>
+              <a href="https://github.com/j-o-phillips" target="_blank">
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  style={{ color: "white" }}
+                  className=" text-5xl"
+                />
+              </a>
               <FontAwesomeIcon
-                icon={faLinkedin}
-                style={{ color: "#0a66c2" }}
-                className="mb-20 text-5xl"
+                onClick={() => {
+                  navigator.clipboard.writeText(myEmail);
+                  setEmailCopied(true);
+                }}
+                icon={faEnvelope}
+                style={{ color: "white" }}
+                className="text-5xl"
               />
-            </a>
+            </div>
+            {emailCopied ? (
+              <p className="mb-20 text-white text-xs">
+                email address copied to clipboard
+              </p>
+            ) : (
+              <div className="mb-20"></div>
+            )}
           </div>
         </section>
       </div>

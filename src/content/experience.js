@@ -16,7 +16,8 @@ export const experience = [
     subtitle: "Online course (c. 100 hrs)",
     dateStart: "Sep 2023",
     dateEnd: "Nov 2023",
-    description: " ",
+    description:
+      "A comprehesive course covering basic and advanced techniques using the 3D javascript framework, Three.js. Includes writing custom shaders in GLSL and incorporating React with React Three Fiber.",
   },
   {
     company: "Codecademy",
