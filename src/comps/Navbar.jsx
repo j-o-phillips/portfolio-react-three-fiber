@@ -140,7 +140,7 @@ const Navbar = () => {
             >
               <a href="#experience">Experience</a>
             </li>
-            <li
+            {/* <li
               className={`font-poppins font-medium cursor-pointer text-[16px] ${
                 active === "interests" ? "text-white" : "text-gray-300"
               }`}
@@ -150,7 +150,7 @@ const Navbar = () => {
               }}
             >
               <a href="#interests">Interests</a>
-            </li>
+            </li> */}
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] ${
                 active === "contact" ? "text-white" : "text-gray-300"
