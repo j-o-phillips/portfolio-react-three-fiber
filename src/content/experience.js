@@ -29,4 +29,16 @@ export const experience = [
     description:
       " This pathway focuses on preparing students for a career in web development through practical learning. As part of the course students complete a number of frontend and backend projects on topics such as React, Node.js, Github, various databases, security best practices, data structures, algorithms and many more.",
   },
+  {
+    company: "Bournemouth Symphony Orchestra",
+    logo: "",
+    title: "Principal 2nd Violin",
+    subtitle: "",
+    dateStart: "Nov 2022",
+    dateEnd: "May 2023",
+    description: ` The BSO is one of the busiest orchestras in the UK and working there full-time requires a high level of discipline and flexibility, as well the ability to navigate different social environments and hit the ground running for each project. My responsibilities included: Preparing and performing in weekly concerts throughout the year,
+      leading the section ( a team of 15-20) when required, and
+      mentoring and organizing the section assistants.
+      `,
+  },
 ];

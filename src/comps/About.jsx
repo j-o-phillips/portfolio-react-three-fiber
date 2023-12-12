@@ -8,7 +8,7 @@ const About = () => {
 
   return (
     <div
-      className="md:flex-row flex-col flex gap-4 bg-[#120d14] justify-center"
+      className="md:flex-row flex-col flex gap-4 bg-[#120d14] justify-center pt-8"
       id="about"
     >
       <section className=" w-[100] md:w-[45%] mx-3">
@@ -21,7 +21,7 @@ const About = () => {
           }}
         >
           <article className="text-white md:p-3">
-            <h1 className="text-3xl text-center md:text-4xl">
+            <h1 className="text-3xl text-center md:text-4xl mb-6">
               Classical Violinist to Developer
             </h1>
             <p className="text-md mx-5 my-3 md:text-lg">
@@ -30,7 +30,7 @@ const About = () => {
               developer, by building software that makes an impact.{" "}
             </p>
 
-            <p className="mx-5 my-3 text-sm md:text-md">
+            <p className="mx-5 my-3 text-md md:text-lg">
               {" "}
               My interest in software engineering began some years ago as a
               hobby, building simple Unity games or designing websites for
@@ -38,7 +38,7 @@ const About = () => {
               of an obsession, so much so that I decided to make a career
               transition.{" "}
             </p>
-            <p className="mx-5 my-3 text-sm md:text-md">
+            <p className="mx-5 my-3 text-md md:text-lg">
               {" "}
               As a former classical violinist I have played with some of the top
               orchestras in the world, and am used to high-pressure,

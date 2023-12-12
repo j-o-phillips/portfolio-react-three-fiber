@@ -7,7 +7,7 @@ import { useThemeContext } from "../context/ThemeContext";
 const Blob = () => {
   const { colorData } = useThemeContext();
   const blobMat = useRef();
-  const yPos = window.innerWidth < 600 ? -0.5 : 0;
+  const yPos = window.innerWidth < 600 ? -0.5 : -0.2;
 
   const colors = {
     depthColor: { r: 0.0, g: 0.0, b: 0.0 },

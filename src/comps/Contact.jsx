@@ -49,11 +49,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-14">
-      <h3
-        className="text-center text-white text-5xl  bg-[#120d14] mb-9"
-        id="contact"
-      >
+    <div className="pt-14" id="contact">
+      <h3 className="text-center text-white text-5xl  bg-[#120d14] mb-9">
         Contact
       </h3>
       <div className="md:flex-row flex-col flex gap-5 bg-[#120d14] justify-center pb-4">

@@ -4,41 +4,8 @@ import { useThemeContext } from "../context/ThemeContext";
 const ProjectDetails = ({ projectNumber, setProjectNumber }) => {
   const { colorData } = useThemeContext();
 
-  const handleToggleProjectLeft = () => {
-    if (projectNumber !== 0) {
-      setProjectNumber((prev) => prev - 1);
-    }
-  };
-  const handleToggleProjectRight = () => {
-    if (projectNumber !== projects.length - 1) {
-      setProjectNumber((prev) => prev + 1);
-    }
-  };
   return (
     <>
-      <title className="flex justify-center items-center bg-[#120d14]">
-        <div className="text-white text-xs m-3">prev</div>
-        <div
-          className="h-[25px] w-[25px] transform rotate-[45deg] mr-6 cursor-pointer"
-          style={{
-            borderLeft: "3px solid white",
-            borderBottom: "3px solid white",
-          }}
-          onClick={handleToggleProjectLeft}
-        ></div>
-        <h5 className=" text-white text-xl sm:text-4xl  text-center">
-          {projects[projectNumber].name}
-        </h5>
-        <div
-          className="h-[25px] w-[25px] transform rotate-[45deg] cursor-pointer  ml-6"
-          style={{
-            borderTop: "3px solid white",
-            borderRight: "3px solid white",
-          }}
-          onClick={handleToggleProjectRight}
-        ></div>
-        <div className="text-white text-xs m-3">next</div>
-      </title>
       <section
         className="text-white mt-7 flex flex-col items-center rounded-[10px] mx-2 md:mx-20 bg-[#120d14]"
         style={{

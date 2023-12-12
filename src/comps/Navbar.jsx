@@ -63,14 +63,14 @@ const Navbar = () => {
           >
             <a href="#experience">Experience</a>
           </li>
-          <li
+          {/* <li
             className={`${
               active === "interests" ? "text-white" : "text-gray-300"
             } hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive("interests")}
           >
             <a href="#interests">Interests</a>
-          </li>
+          </li> */}
           <li
             className={`${
               active === "contact" ? "text-white" : "text-gray-300"
