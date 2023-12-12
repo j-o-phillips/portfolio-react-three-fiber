@@ -22,6 +22,10 @@ body {
   height: 250px;
 }
 
+.r3f {
+  touch-action: none;
+}
+
 @media only screen and (min-width: 370px) {
   .canvas-cont {
     height: 300px;
