@@ -19,7 +19,7 @@ const Hero = () => {
           sub-title md:text-4xl md:left-28 md:top-28 lg:text-5xl lg:top-32 z-20"
           style={{ fontFamily: "Open Sans, sans serif" }}
         >
-          <h1>Full Stack Developer</h1>
+          <h1>Typescript Developer</h1>
         </div>
         <Canvas camera={{ position: [zoom, 0, 0], fov: 25, near: 5, far: 20 }}>
           <Blob />
